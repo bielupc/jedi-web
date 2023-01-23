@@ -1,0 +1,9 @@
+head --- metadata
+body --- visual
+1 indent per cada nivell de profunditat
+div --- contenedor per agrupar
+p --- paragraph (div per texts llargs)
+span --- per canviar el color de una part del text dins del p
+a --- link (anchor)
+
+HTML5 noves etiquetes amb mateixa funció però nom més especific.

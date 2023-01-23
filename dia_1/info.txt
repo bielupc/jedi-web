@@ -1,0 +1,10 @@
+francisco.mendoza@jediupc.com
+
+Extensiones VsCode:
+-HTML CSS Support
+-HTML Snippets
+-Intellisense for CSS class names in HTML
+-Prettier
+-Color Picker
+
+www.w3schools.com
