@@ -1,0 +1,29 @@
+.container {
+    display: inline-block;
+    padding: 5rem;
+    background-color: indigo;
+    color: aliceblue;
+    border: 1px solid black;
+    margin-bottom: 10px;
+}
+
+.test {
+    color: black;
+    top: 20px;
+    left: 20px;
+}
+
+.relative {
+    position: relative;
+    background-color: aquamarine;
+}
+
+.absolute {
+    position: absolute;
+    background-color: burlywood;
+}
+.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    background-color: thistle;
+}
