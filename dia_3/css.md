@@ -72,6 +72,7 @@ Fixed, respecte el viewport, sempre visible.
 display: flex; --> Al pare
 flex: 1; --> Child 50/50 d'espai horitzontal
 Les propietats també van al pare
+Alinea només als fills directes, si hi han fills sueltos, agrupar-los en un div.
 
 **horitzontal**
 * justify-content:
@@ -133,6 +134,18 @@ pels elements dintre del grid:
 Propierats pel body 
   height: 100%;
   margin: 0;
-  
-#Animations
+
+##Animations
 Amb CSS consumeixen menys.
+animation-iteration-count -- quants cops es repeteix l'animació.
+
+##Font Face
+Per fonts pròpies.
+Encara que sigui local, el path s'introdueix amb url()
+Carpeta assets/fonts per gestionar-ho.
+
+##Responsiveness
+@media's es posen al final dels fitxers
+no cal utilitzar screen podem directament (condició) and (condició)...
+display: none ---> Desapareix element
+
