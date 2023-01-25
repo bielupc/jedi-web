@@ -9,14 +9,13 @@ body{
   height: 500px;
   display: grid;
   grid-template: auto;
+  grid-template: 9/10;
   background-color: grey;
   padding: 2px;
 }
 
 .wrapper div{
   border: 2px solid black;
-  position: relative;
-
 }
 
 #q1 {
@@ -37,15 +36,15 @@ body{
 }
 #q5{
   background-color: rgb(235, 235, 235);
-  grid-area: 8/3/10/9;
+  grid-area: 8/3/10/10;
 }
 
 #q6{
   background-color: rgb(255, 255, 255);
-  grid-area: 8/9/9/11;
+  grid-area: 8/10/9/11;
 }
 
 #q7{
   background-color: rgb(255, 140, 0);
-  grid-area: 9/9/10/11;
+  grid-area: 9/10/10/11;
 }
