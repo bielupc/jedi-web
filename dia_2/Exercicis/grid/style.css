@@ -1,0 +1,45 @@
+.wrapper{
+  width: 500px;
+  height: 500px;
+  display: grid;
+  grid-template: auto;
+  background-color: grey;
+  padding: 2px;
+}
+
+.wrapper div{
+  border: 2px solid black;
+  position: relative;
+
+}
+
+#q1 {
+  background-color: rgb(255, 255, 255);
+  grid-area: 1/1/4/3;
+}
+#q2{
+  background-color: red;
+  grid-area: 1/3/8/11;
+}
+#q3{
+  background-color: rgb(255, 255, 255);
+  grid-area: 4/1/8/3;
+}
+#q4{
+  background-color: rgb(27, 42, 175);
+  grid-area: 8/1/10/3;
+}
+#q5{
+  background-color: rgb(235, 235, 235);
+  grid-area: 8/3/10/9;
+}
+
+#q6{
+  background-color: rgb(255, 255, 255);
+  grid-area: 8/9/9/11;
+}
+
+#q7{
+  background-color: rgb(255, 140, 0);
+  grid-area: 9/9/10/11;
+}
