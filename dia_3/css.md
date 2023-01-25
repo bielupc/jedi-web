@@ -130,4 +130,9 @@ pels elements dintre del grid:
 * order també funciona
 * grid-template: rows/columns
 
-
+Propierats pel body 
+  height: 100%;
+  margin: 0;
+  
+#Animations
+Amb CSS consumeixen menys.
