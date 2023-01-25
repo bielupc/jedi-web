@@ -1,4 +1,10 @@
+body{
+  display: flex;
+  justify-content: center;
+}
+
 .wrapper{
+  padding-top: 100px;
   width: 500px;
   height: 500px;
   display: grid;
