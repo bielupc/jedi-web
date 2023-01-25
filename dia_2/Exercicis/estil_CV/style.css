@@ -1,0 +1,88 @@
+body{
+  background-color: rgb(64, 64, 64);
+  color: white;
+  font-family: monospace;
+  padding: 90px;
+}
+
+html{
+  background-color: rgb(132, 132, 132);
+  padding: 30px;
+}
+
+h1{
+  font-size: 30pt;
+}
+
+h2{
+  font-size: 25pt;
+  color: orange;
+}
+
+h3{
+  font-size: 20pt;
+}
+
+h4{
+  font-size: 15pt;
+}
+
+hr{
+  color: orange;
+}
+
+.summary{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+
+p{
+  font-size: 12pt;
+  text-align: justify;
+}
+
+img{
+  border-radius: 20%;
+  padding-top: 10px;
+  padding-right: 20px;
+  height: 200px;
+  width: 200px;
+}
+
+.blocs{
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
+}
+
+.blocs-experience{
+  display: flex;
+  justify-content: center;
+}
+
+.experience{
+  flex: 1;
+}
+
+a{
+    color: rgb(255, 255, 255);
+    font-family: Impact, Haettenschweiler;
+    
+}
+
+a:link{
+  color: white;
+}
+
+a:visited{
+  color: orange;
+}
+
+a:hover{
+  color: rgb(66, 66, 155);
+}
+
+footer{
+  padding-top: 50px;
+}
