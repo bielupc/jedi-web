@@ -49,6 +49,7 @@ img{
   padding-right: 20px;
   height: 200px;
   width: 200px;
+  min-width: 200px;
 }
 
 .nav-link{
@@ -69,6 +70,11 @@ img{
 .experience{
   flex: 1;
 }
+
+.carousel{
+  height: 20vh;
+}
+
 
 a{
     color: rgb(255, 255, 255);
@@ -121,5 +127,11 @@ footer{
   }
   .blocs{
     flex-direction: column;
+  }
+}
+
+@media (max-width: 600px){
+  .carousel{
+    display: none;
   }
 }

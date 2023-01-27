@@ -18,13 +18,13 @@
     <h2 id="up">Summary</h2>
     <hr>
 
-    <div class="summary">
-      <img src="profile.png" alt="profile picture">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus tempora quisquam blanditiis non odio numquam illum excepturi eligendi quibusdam architecto atque iste optio dignissimos a neque, voluptatum reprehenderit culpa minus. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est aliquam dolore, beatae molestiae at laborum esse quod delectus distinctio maiores repellendus ad quidem, quae omnis asperiores libero. Consectetur, omnis ipsa! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere quasi aut omnis aliquid error, minus quod sunt ullam modi quisquam atque reiciendis veritatis repellendus ab magni tenetur non excepturi natus? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem aspernatur asperiores quam quas id ad ratione blanditiis ea illum sapiente quidem, suscipit architecto qui saepe quaerat inventore repudiandae temporibus! Ipsa.</p>
+    <div class="summary row">
+      <img class="col-2" src="profile.png" alt="profile picture">
+      <p class="col">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus tempora quisquam blanditiis non odio numquam illum excepturi eligendi quibusdam architecto atque iste optio dignissimos a neque, voluptatum reprehenderit culpa minus. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est aliquam dolore, beatae molestiae at laborum esse quod delectus distinctio maiores repellendus ad quidem, quae omnis asperiores libero. Consectetur, omnis ipsa! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere quasi aut omnis aliquid error, minus quod sunt ullam modi quisquam atque reiciendis veritatis repellendus ab magni tenetur non excepturi natus? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem aspernatur asperiores quam quas id ad ratione blanditiis ea illum sapiente quidem, suscipit architecto qui saepe quaerat inventore repudiandae temporibus! Ipsa.</p>
     </div>
 
-    <div class="blocs">
-      <div class="bloc">      
+    <div class="blocs row pt-1">
+      <div class="bloc col">      
         <h3>Languages</h3>
         <table>
           <thead>
@@ -50,7 +50,7 @@
         </table>
       </div>
 
-      <div class="bloc">
+      <div class="bloc col">
         <h3>Skills</h3>
         <ul>
           <li>Linux</li>
@@ -62,7 +62,7 @@
         </ul>
       </div>
 
-      <div class="bloc">
+      <div class="bloc col">
         <h3>Eduaction</h3>
         <ol>
           <li>UPC --- Currently studying</li>
@@ -74,15 +74,45 @@
 
     <h2>Experience</h2>
     <hr>
-    <div class="blocs-experience">
-        <div class="experience">
+    <div class="blocs-experience row">
+        <div class="experience col">
           <h4>Freelancing</h4>
           <p>I worked as a freelancer on <b>Fiverr</b> during summer 2021.</p>
         </div>
-        <div class="experience">
+        <div class="experience col">
           <h4>Teacher</h4>
           <p>I have helped my sister pass her math exams. Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
         </div>
+      </div>
+    </div>
+    
+    <div class="row carousel">
+      <div class="col">
+        <h2>Carousel</h2>
+        <div id="carouselExample" class="carousel slide">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="profile.png "class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="profile.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="profile.png" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+
+
+
       </div>
     </div>
 
