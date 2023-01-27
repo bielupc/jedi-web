@@ -1,0 +1,44 @@
+:root {
+    --min-height-value: calc(100vh - 120px);
+} 
+
+body {
+    margin: 0;
+    min-width: 314px;
+    min-height: 100vh;
+}
+
+.bar-wrapper { height: 60px; }
+.main-wrapper-login {
+    justify-content: center;
+    align-items: center;
+    min-height: var(--min-height-value);
+}
+.main-wrapper-outlet {
+    padding: 8px 0;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: flex-start;
+    min-height: var(--min-height-value);
+}
+
+.card-actions {
+    font-weight: bolder;
+    font-size: 12px;
+    border-radius: 20px;
+    width: 28px;
+}
+
+.product-img {
+    height: 150px ;
+}
+
+.item-count,
+.item-count::placeholder {
+    text-align: center;
+}
+
+.social-media {
+    color: black;
+    text-decoration: none;
+}
