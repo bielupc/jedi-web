@@ -14,9 +14,7 @@ function callback(err, user){
   if(err){
     return console.log(err);
   }
-  else{
-    return console.log(`The user's name is ${user}`)
-  }
+  console.log(`The user's name is ${user}`)
 }
 
 const getUser = (id, callback) => {
@@ -27,3 +25,5 @@ const getUser = (id, callback) => {
   }
   callback(`User ${id} not found`);
 }
+
+getUser(4, callback)
