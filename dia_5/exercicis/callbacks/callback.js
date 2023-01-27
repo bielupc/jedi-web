@@ -10,19 +10,20 @@ var db = [
 ];
 
 
-// Callback test
-function print(text){
-  console.log(text);
+function callback(err, user){
+  if(err){
+    return console.log(err);
+  }
+  else{
+    return console.log(`The user's name is ${user}`)
+  }
 }
-
 
 const getUser = (id, callback) => {
   for (let i = 0; i < db.length; i++){
     if (db[i].id === id){
-      return callback(`The user with ${id} is ${db[i].name}`);
+      return callback(null, db[i].name);
     }
   }
-  console.log("User not found");
+  callback(`User ${id} not found`);
 }
-
-
