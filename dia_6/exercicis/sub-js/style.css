@@ -1,0 +1,77 @@
+body{
+  min-height: 100vh; 
+}
+
+/* min-width - deixarà de fer resize a partir de reduir x l'amplada*/
+
+*{
+  font-family: Arial;
+}
+
+h1{
+  text-align: center;
+  color: white;
+  background-color: green;
+}
+
+h3{
+  color: green !important;
+  text-align: center;
+}
+
+.navbar-brand{
+  color: white;
+  font-size: 17pt;
+}
+
+.navbar{
+  height: 10vh;
+}
+
+.login-div{
+  display: flex;
+  height: 80vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+#footer{
+  justify-content: center !important;
+}
+
+.sticky-bottom a{
+  color: rgb(11, 201, 96);
+}
+
+.main{
+  display: flex;
+  justify-content: center;
+  height: 80vh;
+}
+
+.cards{
+  align-items: center;
+}
+
+.card{
+  margin-right: 20px;
+}
+
+input{
+  width: 100%;
+}
+;
+
+@media (max-width: 1000px){
+  .cards{
+    flex-direction: column;
+  }
+  
+}
+
+
+
+
+
