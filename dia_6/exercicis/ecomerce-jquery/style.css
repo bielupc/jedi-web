@@ -1,0 +1,90 @@
+body{
+  min-height: 90vh; 
+}
+
+.sticky-bottom{
+  height: 10%;
+}
+
+.sticky-top{
+  height: 10vh;
+}
+
+#footer{
+  justify-content: center !important;
+}
+
+.main{
+  display: flex;
+  justify-content: center;
+  max-width: 100vw;
+  padding: 60px;
+}
+
+.cards{
+  display: flex;
+  justify-content:center ;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.card{
+  margin-right: 20px;
+  margin-top: 20px;
+  height: 30rem;
+  width: 20rem;
+}
+
+
+
+
+
+
+
+
+*{
+  font-family: Arial;
+}
+
+h1{
+  text-align: center;
+  color: white;
+  background-color: green;
+}
+
+h3{
+  color: green !important;
+  text-align: center;
+}
+
+.navbar-brand{
+  color: white;
+  font-size: 17pt;
+}
+
+
+.sticky-bottom a{
+  color: rgb(11, 201, 96);
+}
+
+input{
+  width: 100%;
+}
+
+@media (max-width: 1000px){
+  .cards{
+    flex-direction: column;
+  }
+  
+}
+
+img{
+  height: 100%;
+  width: 100%;
+}
+
+
+/* min-width - deixarà de fer resize a partir de reduir x l'amplada*/
+
+
+
