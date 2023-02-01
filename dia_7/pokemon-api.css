@@ -1,0 +1,49 @@
+html, body{
+    margin: 0;  
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    font-size: 16px;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/*END-BASE CSS*/
+
+/*POKE-TABLE CSS*/
+th {
+    font-size: 1vw;
+}
+
+td.center, th.center {
+    vertical-align: middle !important;
+    text-align: center;
+    font-size: 1vw;
+}
+
+.sprite img{
+    height: 20vh;
+}
+
+/*ACTIONS CSS*/
+.actions{
+    height: 4vh;   
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+#search{
+    width: 100%;
+    margin: 0 .5rem;
+    font-size: 1rem;
+}
+
+#send-search{
+    width: 4vw;
+    margin-right: .5rem
+}
