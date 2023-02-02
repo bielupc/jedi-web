@@ -11,19 +11,20 @@ function createUUID() {
 }
 
 // Funcion para guardar elementos de JS en la memoria del navegador (persistencia en cliente)
-localStorage.setItem("cart", [{
+localStorage.setItem("cart", JSON.stringify([{
     amount: 3,
     price: 20,
     name: "JEDI T-shirt",
     productId: "f037125b-a337-da4c-adfa-b53717a8151e"
-}]);
+}]));
 
 // Obtener un elemento de la memoria del navegador
-const cart = localStorage.getItem("cart");
+const cart = JSON.parse(localStorage.getItem("cart"));
 
 // Objeto que representa una compra
 const purchase = {
     id: createUUID(),
     cart,
-    total: 60
+    total: 60,
+    userId: ""
 };
