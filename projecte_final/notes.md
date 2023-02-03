@@ -2,11 +2,11 @@
 
 ## TO DO's
 - [X] Nom
-- [ ] Logo
+- [X] Logo
 - [X] Estructura
 - [X] Colors
 - [ ] Fonts
-- [ ] API Acces
+- [X] API Acces
 - [ ] Login Form
 - [ ] Register form
 - [ ] Personal JSON server for user data
