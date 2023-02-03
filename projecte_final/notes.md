@@ -5,7 +5,7 @@
 - [X] Logo
 - [X] Estructura
 - [X] Colors
-- [ ] Fonts
+- [X] Fonts
 - [X] API Acces
 - [ ] Login Form
 - [ ] Register form

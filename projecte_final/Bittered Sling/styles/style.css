@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Secular+One&display=swap');
+
 :root{
   --orange-1: #ff6d00ff;
   --orange-2: #ff7900ff;
@@ -13,4 +15,8 @@
 
   --dark-grey: #212529;
   --less-dark-grey: #343A40;
+}
+
+*{
+  font-family: 'Poppins', sans-serif;
 }
