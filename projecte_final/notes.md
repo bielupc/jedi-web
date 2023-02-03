@@ -2,7 +2,8 @@
 
 ## TO DO's
 - [ ] Nom
-- [ ] Estructura
+- [ ] Logo
+- [X] Estructura
 - [ ] Colors
 - [ ] Fonts
 - [ ] API Acces
