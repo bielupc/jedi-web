@@ -1,0 +1,27 @@
+i, a b, button b{
+  color: white;
+}
+
+.navbar{
+  height: 10vh;
+}
+
+.offcanvas{
+  color: white;
+  background-color: #198754;
+  backdrop-filter: blur(6px);
+  opacity: 0.96;
+}
+
+.card-item i{
+  font-size: 40px;
+}
+
+.card-item div{
+  background-color: red;
+}
+
+h1 span{
+  color: red;
+}
+
