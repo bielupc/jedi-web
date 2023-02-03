@@ -1,10 +1,10 @@
 # NOTES
 
 ## TO DO's
-- [ ] Nom
+- [X] Nom
 - [ ] Logo
 - [X] Estructura
-- [ ] Colors
+- [X] Colors
 - [ ] Fonts
 - [ ] API Acces
 - [ ] Login Form
