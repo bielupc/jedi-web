@@ -7,15 +7,16 @@
 - [X] Colors
 - [X] Fonts
 - [X] API Acces
-- [ ] Login Form
-- [ ] Register form
+- [X] Login Form
+- [X] Register form
 - [ ] Personal JSON server for user data
-- [ ] Alerts
+- [ ] Alerts + alerts invalid form alert
 - [ ] Proper user validation
 - [ ] Footer
 - [ ] Navbar
 - [ ] Landing page
 - [ ] Searching page
+- [ ] Not found page
 - [ ] Proper navigation and user integration
 - [ ] Customize landing page
 - [ ] Customize searching page

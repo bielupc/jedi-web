@@ -20,3 +20,13 @@
 *{
   font-family: 'Poppins', sans-serif;
 }
+
+::-moz-selection { 
+  color: rgb(255, 255, 255);
+  background: var(--orange-4);
+}
+
+::selection {
+  color: white;
+  background: var(--orange-4);
+}
