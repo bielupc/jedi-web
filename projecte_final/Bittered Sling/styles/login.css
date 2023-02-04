@@ -184,7 +184,7 @@ input:focus{
 @media (max-width: 1500px){
     .login-card{
         height: ovh;
-        width: 70vw;
+        width: 60vw;
         height: 60vh;
     }
 
