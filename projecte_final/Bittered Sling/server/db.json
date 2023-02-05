@@ -1,9 +1,10 @@
 {
   "users": [
     {
-      "id": "ae38acc8-a31b-11ed-a8fc-0242ac120002",
-      "username": "biel",
-      "password": "123"
+      "id": 1,
+      "username": "admin",
+      "password": "admin"
+
     }
   ]
 }

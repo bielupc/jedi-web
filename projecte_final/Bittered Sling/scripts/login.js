@@ -1,8 +1,22 @@
 api = "https://bittered-sling-json-server-production.up.railway.app/"
 let users = [];
-let justRegistered = false;
 
 $(window).on("load", async () => {
+  // Alertes i validacions
+  if (JSON.parse(localStorage.getItem("justRegistered"))){
+    showSuccess("The user has been successfully registered!");
+    localStorage.setItem("justRegistered", false)
+  }
+
+  if (JSON.parse(localStorage.getItem("logged")) === false){
+    showWarning("You need to log in or create a new user!")
+    localStorage.removeItem("logged")
+  }
+  if (JSON.parse(localStorage.getItem("logged")) === 1){
+    showWarning("You have been logged out")
+    localStorage.removeItem("logged")
+  }
+
   try{
     users = (await axios.get(api+"users")).data;
   }
@@ -14,6 +28,7 @@ $(window).on("load", async () => {
   $("#login").on("click", login);
 });
 
+// Canviar a formulari de registre
 const changeToRegister = () => {
   $(".alert-wrapper").empty();
   $(".login-card").replaceWith(`
@@ -33,11 +48,9 @@ const changeToRegister = () => {
   $("#register").on("click", register);
 };
 
+// Canviar a formulari de login
 const changeToLogin = () => {
-  if (!justRegistered){
-    $(".alert-wrapper").empty();
-    justRegistered = false;
-  }
+  $(".alert-wrapper").empty();
   $(".login-card").replaceWith(`
     <div class="login-card">
       <h1><b>Login</b></h1>
@@ -54,13 +67,16 @@ const changeToLogin = () => {
   $("#login").on("click", login);
 };
 
+
+// Procés de login
 const login = () => {
   const username = $(".username").val();
   const password = $(".password").val();
   const user = users.find(user => user.username === username && user.password === password);
   if (username && password){
     if (user){
-      showSuccess("User logged in");
+      localStorage.setItem("logged", true);
+      window.location.href = "pages/home.html";
     }
     else{
       showWarning("The password you have entered is incorrect!");
@@ -71,6 +87,7 @@ const login = () => {
   }
 };
 
+// Procés de registre
 const register = async () => {
   const username = $(".username").val();
   const password1 = $(".password-1").val();
@@ -82,7 +99,7 @@ const register = async () => {
         const user = {
             id: createUUID(),
             username,
-            password: password1
+            password: password1,
         };
         await axios.post(api+"users", user)
         .then(res => {
@@ -92,9 +109,8 @@ const register = async () => {
           console.error(err); 
           showWarning("There has been an error!");
         })
-        justRegistered = true;
-        changeToLogin();
-        showSuccess("The user has been successfully registered!");
+        localStorage.setItem("justRegistered", true);
+        location.reload()
       }
       else{
         showWarning("The passwords you have entered do not match!");
@@ -109,8 +125,9 @@ const register = async () => {
   }
 };
 
+// Utils
 const showWarning = (msg) => {
-  $(".alert-wrapper").replaceWith(`
+  $(".alert-wrapper").replaceWith($(`
     <div class="alert-wrapper row justify-content-center">
       <div class="align-self-end alert alert-danger position-absolute d-flex align-items-center justify-content-center" role="alert">
         <div>
@@ -119,11 +136,11 @@ const showWarning = (msg) => {
         </div>
       </div>
     </div>
-  `);
+  `).hide().fadeIn("3000"));
 };
 
-const showSuccess= (msg) => {
-  $(".alert-wrapper").replaceWith(`
+const showSuccess = (msg) => {
+  $(".alert-wrapper").replaceWith($(`
     <div class="alert-wrapper row justify-content-center">
       <div class="align-self-end alert alert-success position-absolute d-flex align-items-center justify-content-center" role="alert">
         <div>
@@ -132,7 +149,7 @@ const showSuccess= (msg) => {
         </div>
       </div>
     </div>
-  `);
+  `).hide().fadeIn("3000"));
 };
 
 function createUUID() {
