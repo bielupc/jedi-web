@@ -1,11 +1,13 @@
 api = "https://bittered-sling-json-server-production.up.railway.app/"
 let users = [];
+let justRegistered = false;
 
 $(window).on("load", async () => {
   try{
     users = (await axios.get(api+"users")).data;
   }
   catch(error){
+    showWarning("Couldn't connect to server...")
     console.log(error);
   }
   $("#change-to-register").on("click", changeToRegister);
@@ -13,6 +15,7 @@ $(window).on("load", async () => {
 });
 
 const changeToRegister = () => {
+  $(".alert-wrapper").empty();
   $(".login-card").replaceWith(`
     <div class="login-card">
       <h1><b>Register</b></h1>
@@ -31,7 +34,10 @@ const changeToRegister = () => {
 };
 
 const changeToLogin = () => {
-  heightMod = false;
+  if (!justRegistered){
+    $(".alert-wrapper").empty();
+    justRegistered = false;
+  }
   $(".login-card").replaceWith(`
     <div class="login-card">
       <h1><b>Login</b></h1>
@@ -49,57 +55,84 @@ const changeToLogin = () => {
 };
 
 const login = () => {
-  const username = $(".username").val()
-  const password = $(".password").val()
+  const username = $(".username").val();
+  const password = $(".password").val();
   const user = users.find(user => user.username === username && user.password === password);
   if (username && password){
     if (user){
-      alert("success")
+      showSuccess("User logged in");
     }
     else{
-      alert("wrong passwd")
+      showWarning("The password you have entered is incorrect!");
     }
   }
   else{
-    alert("empty fields")
+    showWarning("You must fill all the fields!");
   }
 };
 
 const register = async () => {
-  const username = $(".username").val()
-  const password1 = $(".password-1").val()
-  const password2 = $(".password-2").val()
+  const username = $(".username").val();
+  const password1 = $(".password-1").val();
+  const password2 = $(".password-2").val();
   const registered = users.find(user => user.username === username);
   if(!registered){
     if (username && password1 && password2){
       if (password1 === password2){
-        console.log("valid")
         const user = {
             id: createUUID(),
             username,
             password: password1
-        }
+        };
         await axios.post(api+"users", user)
         .then(res => {
-          console.log(res)
+          console.log(res);
         })
         .catch(err => {
           console.error(err); 
+          showWarning("There has been an error!");
         })
-        location.reload()
-        alert("success")
+        justRegistered = true;
+        changeToLogin();
+        showSuccess("The user has been successfully registered!");
       }
       else{
-        alert("passwords don't match")
+        showWarning("The passwords you have entered do not match!");
       }
     }
     else{
-      alert("empty fields")
+      showWarning("There are some empty fields!");
     }
    }
    else{
-    alert("already registered")
+    showWarning("This user is already registered!");
   }
+};
+
+const showWarning = (msg) => {
+  $(".alert-wrapper").replaceWith(`
+    <div class="alert-wrapper row justify-content-center">
+      <div class="align-self-end alert alert-danger position-absolute d-flex align-items-center justify-content-center" role="alert">
+        <div>
+          <i class="fa-solid fa-triangle-exclamation"></i> 
+          ${msg}
+        </div>
+      </div>
+    </div>
+  `);
+};
+
+const showSuccess= (msg) => {
+  $(".alert-wrapper").replaceWith(`
+    <div class="alert-wrapper row justify-content-center">
+      <div class="align-self-end alert alert-success position-absolute d-flex align-items-center justify-content-center" role="alert">
+        <div>
+          <i class="fa-solid fa-check"></i>
+          ${msg}
+        </div>
+      </div>
+    </div>
+  `);
 };
 
 function createUUID() {

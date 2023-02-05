@@ -64,6 +64,16 @@ input:focus{
     text-decoration: none;
 }
 
+.alert-wrapper{
+    position: absolute;
+    align-self: flex-start;
+    width: 24vw;
+    margin-top: 8%;
+}
+
+.alert{
+    border-radius: 20px;
+}
 
 /* Background animation */
 .area{
@@ -191,13 +201,33 @@ input:focus{
     .login-card h1{
         padding-top: 5%;
     }
+
+    .alert-wrapper{
+        width: 60vw;
+    }
+
+    .login-form > input{
+    height: 70px;
+    }
+    
+    .alert-wrapper{
+        padding-top: 5%;
+    }
 }
 
+/* Media queries */
 @media (max-width: 500px){
     .login-card{
         width: 100vw;
         height: 100vh;
         border-radius: 0;
+    }
+
+    .alert-wrapper{
+        align-self: center;
+        width: 80vw;
+        min-width: 400px;
+        padding-top: 20px;
     }
 }
 

@@ -9,12 +9,14 @@
 - [X] API Acces
 - [X] Login Form
 - [X] Register form
-- [ ] Personal JSON server for user data
-- [ ] Alerts + alerts invalid form alert
-- [ ] Proper user validation
-- [ ] Footer
+- [X] Personal JSON server for user data
+- [X] Alerts + alerts invalid form alert
+- [X] Responsive alerts
+
 - [ ] Navbar
-- [ ] Landing page
+- [ ] Proper user validation and page access
+- [ ] Footer
+- [ ] Landing pag
 - [ ] Searching page
 - [ ] Not found page
 - [ ] Proper navigation and user integration
