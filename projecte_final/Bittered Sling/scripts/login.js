@@ -26,6 +26,13 @@ $(window).on("load", async () => {
   }
   $("#change-to-register").on("click", changeToRegister);
   $("#login").on("click", login);
+
+  // Enter també activa el botó
+  $(document).keypress(function(event) {
+    if (event.which === 13) {
+        $(".btn").click();
+    }
+  });
 });
 
 // Canviar a formulari de registre
@@ -79,7 +86,7 @@ const login = () => {
       window.location.href = "pages/home.html";
     }
     else{
-      showWarning("The password you have entered is incorrect!");
+      showWarning("The password or the username is incorrect!");
     }
   }
   else{
