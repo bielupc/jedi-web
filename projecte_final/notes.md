@@ -1,4 +1,5 @@
 # NOTES
+* Perque el projecti funcioni, ha d'estar hostejat en un servidor local per ex.
 
 ## TO DO's
 - [X] Nom
@@ -12,10 +13,15 @@
 - [X] Personal JSON server for user data
 - [X] Alerts + alerts invalid form alert
 - [X] Responsive alerts
+- [X] Local storage per logged i justRegistered
 
-- [ ] Navbar
-- [ ] Proper user validation and page access
+
+- [ ] Navbar (logout!)
+- [X] Proper user validation and page access
 - [ ] Footer
+- [ ] Go up button
+- [ ] Marcador de tab actual
+
 - [ ] Landing pag
 - [ ] Searching page
 - [ ] Not found page

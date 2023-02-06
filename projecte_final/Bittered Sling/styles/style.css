@@ -30,3 +30,7 @@
   color: white;
   background: var(--orange-4);
 }
+
+.navbar .active{
+  color: var(--violet-5) !important;
+}

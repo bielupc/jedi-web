@@ -7,7 +7,6 @@ $(window).on("load", async () => {
     showSuccess("The user has been successfully registered!");
     localStorage.setItem("justRegistered", false)
   }
-
   if (JSON.parse(localStorage.getItem("logged")) === false){
     showWarning("You need to log in or create a new user!")
     localStorage.removeItem("logged")
@@ -24,6 +23,7 @@ $(window).on("load", async () => {
     showWarning("Couldn't connect to server...")
     console.log(error);
   }
+  
   $("#change-to-register").on("click", changeToRegister);
   $("#login").on("click", login);
 

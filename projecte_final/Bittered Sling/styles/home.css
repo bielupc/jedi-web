@@ -1,0 +1,86 @@
+/* Ajustaments generals */
+body{
+  min-height: 100vh;
+  margin: 0;
+  background-color: var(--dark-grey)
+}
+
+.navbar{
+  margin: 20px;
+  border-radius: 20px;
+  background-color: var(--dark-grey);
+}
+
+.container-fluid{
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.navbar i{
+  padding-right: 5px;
+}
+
+.navbar img{
+  margin-right: 10px;
+}
+
+.navbar-toggler{
+  color: white;
+  background-color: var(--less-dark-grey);
+}
+
+.navbar a{
+  color: white;
+}
+
+/* Efectes links del navbar */
+.navbar a:hover{
+  color: var(--violet-5);
+}
+
+.navbar li a::after{
+  content: '';
+  height: 2px;
+  width: 0%;
+  background-color: var(--violet-5);
+  display: block;
+  transition: .5s ease-in-out;
+}
+
+.navbar li a:hover::after{
+  content: '';
+  height: 2px;
+  width: 100%;
+  background-color: var(--violet-5);
+  display: block;
+}
+
+
+
+/* Media queries pel navbar en versió mòbil */
+@media (min-width: 990px){
+  nav.scrolled-down {
+    height: 80px;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.14);
+    border-radius: 0;
+    margin: 0px;
+  }
+
+  nav.scrolled-down img {
+    scale: 1.25;
+  }
+}
+
+@media (max-width: 989px){
+  nav.scrolled-down {
+    border-radius: 0;
+    margin: 0px;
+  }
+
+}
+
+
+
+
+
+
