@@ -44,14 +44,17 @@ h4{
 
 .col .social-links a{
   display: inline-block;
-  height: 40px;
-  width: 40px;
+  height: 50px;
+  width: 50px;
   background-color: var(--violet-5);
   text-align: center;
+  vertical-align: middle;
   margin: 0 10px 10px 0;
   line-height: 42px;
   border-radius: 50%;
   color: white;
+  padding-top: 10px;
+  font-size: 25px;
 }
 
 .col .social-links a:hover{
@@ -66,3 +69,5 @@ h4{
 
   }
 }
+
+

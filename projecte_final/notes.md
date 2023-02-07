@@ -20,15 +20,14 @@
 - [X] Proper user validation and page access
 - [X] Footer
 - [X] Welcome alert disappear + CSS
-- [ ] Go up button
 - [X] Marcador de tab actual
 
 - [ ] Landing pag
+- [ ] Go up button
+- [X] Check login alert with content landing page
+
 - [ ] Searching page
 - [ ] Not found page
-- [ ] Proper navigation and user integration
-- [ ] Customize landing page
-- [ ] Customize searching page
-- [ ] Proper functionality
+- [ ] Adjustments
 - [ ] Responsiveness
 - [ ] Fix overflow on main

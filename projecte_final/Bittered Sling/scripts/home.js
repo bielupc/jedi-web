@@ -12,15 +12,18 @@ $(window).on("load", () => {
     $(".alert-wrapper").css("min-height", "70px").fadeOut(3000).remove(3000);
   }
 
-  //Extend del navbar
+  //Extend del navbar i up button
+  let top = document.getElementById("top");
   const nav = document.querySelector("#nav");
   const onScroll = (event) => {
     const scrollPosition = event.target.scrollingElement.scrollTop;
     if (scrollPosition > 10) {
       if (!nav.classList.contains("scrolled-down")) {
         nav.classList.add("scrolled-down");
+        top.style.display = "block";
       }
     } else {
+      top.style.display = "none";
       if (nav.classList.contains("scrolled-down")) {
         nav.classList.remove("scrolled-down");
       }
@@ -28,8 +31,6 @@ $(window).on("load", () => {
   };
 
   document.addEventListener("scroll", onScroll);
-
-
 });
 
 

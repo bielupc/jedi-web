@@ -6,15 +6,14 @@ html, body{
   padding: 0;
 }
 
-
 body{
   background-color: var(--dark-grey)
 }
 
 main{
   color: white;
-  padding-left: 50px;
-  padding-right: 50px;
+  /* padding-left: 50px;
+  padding-right: 50px; */
 }
 
 .navbar{
@@ -44,6 +43,48 @@ main{
 .navbar a{
   color: white;
 }
+
+/* Secció 1 */
+section{
+  position: relative;
+  width: 100%;
+  min-height: 400px;
+}
+
+.section-1 h1{
+  color: var(--violet-5);
+  font-size: 50px;
+  text-align: center;
+}
+
+.section-1 p{
+  align-self: center;
+  text-align: center;
+  padding: 60px;
+  font-size: 20px;
+}
+
+.section-1 img{
+  height: 350px;
+}
+
+
+@media (max-width: 1000px){
+  .section-1{
+    flex-direction: column;
+  }
+  .section-1 img{
+    display: none;
+  }
+  .text{
+    width: 100%;
+  }
+}
+
+
+
+/* Secció 2 */
+
 
 /* Efectes links del navbar */
 .navbar a:hover{
@@ -100,8 +141,24 @@ main{
 
 }
 
+/* Move up button */
+#top{
+  /* display: none; */
+  position: fixed;
+  bottom: 20px;
+  right: 30px; 
 
+  background-color: var(--orange-3); 
+  color: white; 
+  padding-top: 10px;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 28px; 
+  height: 50px;
+  width: 50px;
+}
 
-
-
+#top:hover {
+  background-color: var(--less-dark-grey); 
+}
 
