@@ -9,6 +9,7 @@ $(window).on("load", () => {
   else if (JSON.parse(localStorage.getItem("logged")) === true){
     showSuccess("You have successfully logged in!")
     localStorage.setItem("logged", 1);
+    $(".alert-wrapper").css("min-height", "70px").fadeOut(3000).remove(3000);
   }
 
   //Extend del navbar

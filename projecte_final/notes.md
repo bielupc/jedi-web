@@ -16,11 +16,12 @@
 - [X] Local storage per logged i justRegistered
 
 
-- [ ] Navbar (logout!)
+- [X] Navbar (logout!)
 - [X] Proper user validation and page access
-- [ ] Footer
+- [X] Footer
+- [X] Welcome alert disappear + CSS
 - [ ] Go up button
-- [ ] Marcador de tab actual
+- [X] Marcador de tab actual
 
 - [ ] Landing pag
 - [ ] Searching page
@@ -30,3 +31,4 @@
 - [ ] Customize searching page
 - [ ] Proper functionality
 - [ ] Responsiveness
+- [ ] Fix overflow on main
