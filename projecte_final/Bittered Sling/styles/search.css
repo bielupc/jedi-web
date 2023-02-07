@@ -1,0 +1,53 @@
+html{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  position: relative;
+  margin: 0;
+  padding: 0;
+  background-color: var(--dark-grey);
+  min-height: calc(100vh - 20px); /* Navbar margin */
+}
+
+main{
+  min-height: calc(100vh - 20px);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.section1{
+  background-color: blue;
+}
+
+.section2{
+  background-color: brown;
+}
+
+section{
+  min-height: 300px;
+  width: 100%;
+}
+
+
+/* Move up button */
+#top{
+  /* display: none; */
+  position: fixed;
+  bottom: 20px;
+  right: 30px; 
+
+  background-color: var(--orange-3); 
+  color: white; 
+  padding-top: 5px;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 28px; 
+  height: 50px;
+  width: 50px;
+}
+
+#top:hover {
+  background-color: var(--less-dark-grey); 
+}

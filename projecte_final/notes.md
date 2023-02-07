@@ -23,11 +23,13 @@
 - [X] Marcador de tab actual
 
 - [ ] Landing pag
-- [ ] Go up button
+- [ ] Fix overflow on main
+- [X] Go up button
 - [X] Check login alert with content landing page
 
 - [ ] Searching page
+- [ ] Social center icons
+
 - [ ] Not found page
 - [ ] Adjustments
 - [ ] Responsiveness
-- [ ] Fix overflow on main
