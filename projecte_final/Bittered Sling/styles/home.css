@@ -313,12 +313,25 @@ section{
 
 .section-4 h4{
   color: var(--dark-grey);
+  text-align: justify;
+  padding-top: 5px;
 }
 
 .section-4 .items{
-  padding-left: 100px;
+  padding-left: 220px;
 }
+
+@media (max-width: 1000px){
+  .section-4 .items{
+    padding-left: 90px;
+  }
+}
+@media (max-width: 600px){
+  .section-4{
+    flex-direction: column;
+  }
   
+}
 
 /* Alertes */
 
