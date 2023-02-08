@@ -34,12 +34,6 @@ $(window).on("load", () => {
 });
 
 
-
-
-
-
-
-
 // Utils
 const showWarning = (msg) => {
   $(".alert-wrapper").replaceWith($(`

@@ -1,3 +1,4 @@
+/* Ajustaments generals */
 html{
   margin: 0;
   padding: 0;
@@ -9,6 +10,7 @@ body{
   padding: 0;
   background-color: var(--dark-grey);
   min-height: calc(100vh - 20px); /* Navbar margin */
+  min-width: 350px;
 }
 
 main{
@@ -33,7 +35,7 @@ section{
 
 /* Move up button */
 #top{
-  /* display: none; */
+  display: none;
   position: fixed;
   bottom: 20px;
   right: 30px; 
