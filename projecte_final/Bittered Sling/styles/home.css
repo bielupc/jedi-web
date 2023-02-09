@@ -321,6 +321,12 @@ section{
   padding-left: 350px;
 }
 
+.section-4:last-child{
+  font-size: 23px;
+  padding-top: 20px;
+  text-align: justify;
+}
+
 @media (max-width: 1300px){
   .section-4 .items{
     padding-left: 90px;
@@ -330,8 +336,13 @@ section{
   .section-4{
     flex-direction: column;
   }
-  
+  .section-4:last-child{
+    font-size: 18px;
+  }
 }
+
+
+
 
 /* Alertes */
 

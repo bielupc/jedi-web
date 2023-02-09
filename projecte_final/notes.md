@@ -1,5 +1,6 @@
 # NOTES
 * Perque el projecti funcioni, ha d'estar hostejat en un servidor local per ex.
+* Tarda en fer el request a vegades.
 
 ## TO DO's
 - [X] Nom
@@ -27,13 +28,20 @@
 - [X] Go up button
 - [X] Check login alert with content landing page
 
-- [ ] Searching page
 - [X] Search bar
-- [ ] Cards
-- [ ] Offcanvas cards
+- [X] Cards
 - [X] Social center icons
+- [X] Fix cards layout
+- [X] First letter search
+- [X] Convert to lowercase
+- [X] Filter search (get categories, ingredients and check)
 
+- [ ] Enter search
+- [ ] Offcanvas cards
+- [ ] Arreglar prioritat
+- [ ] Random drink
 - [ ] Not found page or alert
+
 - [ ] Search preview
 - [ ] Adjustments
 - [ ] Responsiveness
