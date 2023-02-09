@@ -318,10 +318,10 @@ section{
 }
 
 .section-4 .items{
-  padding-left: 220px;
+  padding-left: 350px;
 }
 
-@media (max-width: 1000px){
+@media (max-width: 1300px){
   .section-4 .items{
     padding-left: 90px;
   }

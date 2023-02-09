@@ -22,14 +22,18 @@
 - [X] Welcome alert disappear + CSS
 - [X] Marcador de tab actual
 
-- [ ] Landing pag
-- [ ] Fix overflow on main
+- [X] Landing pag
+- [X] Fix overflow on main
 - [X] Go up button
 - [X] Check login alert with content landing page
 
 - [ ] Searching page
-- [ ] Social center icons
+- [X] Search bar
+- [ ] Cards
+- [ ] Offcanvas cards
+- [X] Social center icons
 
-- [ ] Not found page
+- [ ] Not found page or alert
+- [ ] Search preview
 - [ ] Adjustments
 - [ ] Responsiveness

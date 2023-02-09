@@ -1,8 +1,4 @@
 /* Ajustaments generals */
-html{
-  margin: 0;
-  padding: 0;
-}
 
 body{
   position: relative;
@@ -17,20 +13,54 @@ main{
   min-height: calc(100vh - 20px);
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
-.section1{
-  background-color: blue;
+html, body{
+  padding: 0;
+  margin: 0;
+}
+ 
+.searchbar{
+  padding-top: 50px;
+  width: 75%;
 }
 
-.section2{
-  background-color: brown;
+.searchbar button{
+  color: white;
+  background-color: var(--orange-3) !important;
+  border-radius: 15%;
+  height: 60px;
+  width: 60px;
+  display: grid;
+  place-items: center;
+  border: 0;
 }
 
-section{
-  min-height: 300px;
-  width: 100%;
+.searchbar input{
+  height: 60px;
+  width: 50%;
+  border-radius: 10px; 
+  border: 0;
 }
+
+.searchbar input:focus{
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 30px var(--orange-5);
+}
+
+
+.searchbar button:hover{
+  color: var(--orange-3);
+  background-color: white !important;
+
+}
+
+#search{
+  margin-right: 3px;
+}
+
+
+
 
 
 /* Move up button */
