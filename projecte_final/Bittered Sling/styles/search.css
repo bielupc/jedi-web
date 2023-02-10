@@ -139,22 +139,6 @@ html, body{
   background-color: var(--violet-4);
 }
 
-/* Card extend */
-
-/* .desplegable{
-  height: 80vh;
-  width: 60vw;
-  margin-top: 10vh;
-  margin-left: 20vw;
-  margin-right: 20vw;
-  min-width: 340px;
-
-  border-radius:20px ;
-  background-color: var(--dark-grey) ;
-  color: white;
-} */
-
-
 .desplegable{
   height: 80vh !important;
   width: 60vw;

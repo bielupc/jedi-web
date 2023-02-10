@@ -39,11 +39,13 @@
 - [X] Enter search
 - [X] Offcanvas cards
 - [X] Arreglar prioritat
-- [ ] Random drink
+- [X] Random drink
 - [X] Alcoholic request
 - [X] Ingredients i etiquetes
 - [ ] Not found page or alert
 - [ ] Search preview
+- [ ] Glass type
+- [X] Glass colors
 
 - [ ] Adjustments
 - [ ] Responsiveness
