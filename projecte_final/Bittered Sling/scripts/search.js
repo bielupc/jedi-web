@@ -123,16 +123,6 @@ const handleSearch = async () => {
     }
   }
  }
-
-  //Hover disappear
-  $(".image").mouseenter(function(e) {
-      let id = e.target.parentElement.id;
-      $(`#tittle-${id}`).hide();  
-  }).mouseleave(function(e) {      
-      let id = e.target.parentElement.id;
-        $(`#tittle-${id}`).show();
-      }
-  );
 }
 
 // Display de les opcions 
@@ -205,4 +195,14 @@ const displayCards = (drinks) => {
     }
     id++;
   });
+
+ //Hover disappear
+  $(".image").mouseenter(function(e) {
+      let id = e.target.parentElement.id;
+      $(`#tittle-${id}`).hide();  
+  }).mouseleave(function(e) {      
+      let id = e.target.parentElement.id;
+        $(`#tittle-${id}`).show();
+      }
+  );
 }
