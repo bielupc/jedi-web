@@ -40,6 +40,8 @@
 - [X] Offcanvas cards
 - [X] Arreglar prioritat
 - [ ] Random drink
+- [X] Alcoholic request
+- [X] Ingredients i etiquetes
 - [ ] Not found page or alert
 - [ ] Clear "//"
 

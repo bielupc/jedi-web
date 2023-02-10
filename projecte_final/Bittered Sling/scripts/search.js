@@ -26,17 +26,12 @@ $(window).on("load", async () => {
   document.addEventListener("scroll", onScroll);
 
   // Llistes de filtres
-  // categoriesList = (await axios.get(api + "list.php?c=list")).data.drinks;
-  // glassList  = (await axios.get(api + "list.php?g=list")).data.drinks; 
-  // ingredientsList= (await axios.get(api + "list.php?i=list")).data.drinks;
-  // alcoholicList= (await axios.get(api + "list.php?a=list")).data.drinks;
+  categoriesList = (await axios.get(api + "list.php?c=list")).data.drinks;
+  glassList  = (await axios.get(api + "list.php?g=list")).data.drinks; 
+  ingredientsList= (await axios.get(api + "list.php?i=list")).data.drinks;
+  alcoholicList= (await axios.get(api + "list.php?a=list")).data.drinks;
 
   // Enter també activa el botó de búsqueda 
-  $(document).keypress(function(e) {
-    if (e.which === 13) {
-        $(".search").click();
-    }
-  });
   $('.form-control').keypress(function (e) {                                       
        if (e.which == 13) {
           e.preventDefault();
@@ -47,8 +42,6 @@ $(window).on("load", async () => {
   //Search
   $("#search").on("click", handleSearch);
 
-  //Expand cocktail card
-  $("#select").on("click", handleSelect);
 
 });
 
@@ -76,9 +69,9 @@ const handleSearch = async () => {
           console.log("Es una categoria")
       }
       else{
-        const drinks = (await axios.get(api+"search.php?s="+userInput)).data.drinks;
-        if (drinks){
-          displayCards(drinks);
+        const drink = (await axios.get(api+"search.php?s="+userInput)).data.drinks;
+        if (drink){
+          displayCards(drink);
           console.log("Normal search")
         }
         else{
@@ -104,11 +97,6 @@ const handleSearch = async () => {
   }
  }
 
- const handleSelect = () => {
-  console.log("cards expand")
- }
-
-
   //Hover disappear
   $(".image").mouseenter(function(e) {
       let id = e.target.parentElement.id;
@@ -124,17 +112,57 @@ const handleSearch = async () => {
 const displayCards = (drinks) => {
   $(".cards").empty();
   let id = 0;
-  drinks.forEach(drink => {
+  drinks.forEach(async (drink) => {
+
+    if (!drink.strInstructions){
+      drink = (await axios.get(api+"lookup.php?i="+drink.idDrink)).data.drinks[0];
+    }
+
+    let tags = [drink.strAlcoholic, drink.strCategory];
+
+    if (drink.strIBA){
+      tags.push(drink.strIBA);
+    }
+
+    if (drink.strTags) {
+      let splitted = drink.strTags.split(",");
+      splitted.map(tag => tags.push(tag))
+    }
+
+
+    console.log(tags)
+
+
     $(".cards").append(`
-      <div class="card" id="${id}">
+      <div class="card d-flex" id="${id}">
         <img class="image" src="${drink.strDrinkThumb}" alt="${drink.strDrink} photo">
-        <button type="button" class="btn btn-primary btn-lg">Select</button>
-        <h2 id="tittle-${id}"class="tittle">${drink.strDrink}</h2>
+        <button id="select-${id}" class="btn btn-primary btn-lg" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop-${id}" aria-controls="offcanvasTop">Select</button>
+        <div class="desplegable offcanvas offcanvas-top justify-content-center align-items-center" tabindex="-1" id="offcanvasTop-${id}" aria-labelledby="offcanvasTopLabel">
+          <div class="offcanvas-header d-flex justify-content-center align-items-center flex-column">
+            <h1>${drink.strDrink}</h1>
+            <h5>${tags.join(" | ")}</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <p class="row">${drink.strInstructions}</p>
+            <div class="row graphic">
+              <img class="col" src="${drink.strDrinkThumb}">
+              <div class="col d-flex justify-content-start align-items-center flex-column">
+                <h4 class="ingredients">Ingredients</h4>
+                <ul class="ow">
+                  <li>&#x2022;Holaasdk (1sdfj)</li>
+                </ul>
+              </div>
+            </div> 
+          </div>
+        </div> 
+        <h2 id="tittle-${id}" class="tittle">${drink.strDrink}</h2>
       </div>
     `);
     id++;
   });
 }
+
 // Utils
 const showWarning = (msg) => {
   $(".alert-wrapper").replaceWith($(`
