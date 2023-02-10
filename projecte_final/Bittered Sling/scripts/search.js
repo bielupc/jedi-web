@@ -109,6 +109,11 @@ const handleSearch = async () => {
                 console.log("Es busca un got")
               }
               else{
+                $(".cards").replaceWith(`
+                <div class="cards">
+                  <img src="../assets/not-found.svg" alt="not found" style="height: 50%;" class="img-fluid">
+                </div>
+                `);
                 console.log("Not found!")
               }
             }
@@ -174,7 +179,7 @@ const displayCards = (drinks) => {
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
           <div class="offcanvas-body">
-            <p class="row">${drink.strInstructions} This drink should be properly served with a ${drink.strGlass}</p>
+            <p class="row">${drink.strInstructions} This drink should be properly served with a ${drink.strGlass}.</p>
             <div class="row graphic">
               <img class="col" src="${drink.strDrinkThumb}">
               <div class="col d-flex justify-content-start align-items-center flex-column">

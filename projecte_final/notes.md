@@ -1,6 +1,7 @@
 # NOTES
 * Perque el projecti funcioni, ha d'estar hostejat en un servidor local per ex.
 * Tarda en fer el request a vegades.
+* Funcionalitat com likes
 
 ## TO DO's
 - [X] Nom
@@ -42,10 +43,10 @@
 - [X] Random drink
 - [X] Alcoholic request
 - [X] Ingredients i etiquetes
-- [ ] Not found page or alert
-- [ ] Search preview
-- [ ] Glass type
+- [X] Not found page or alert
+- [X] Search preview
+- [X] Glass type
 - [X] Glass colors
 
 - [ ] Adjustments
-- [ ] Responsiveness
+- [X] Responsiveness
