@@ -1,6 +1,5 @@
 const api = "https://www.thecocktaildb.com/api/json/v1/1/";
 
-//Llistes de filtres
 let categoriesList;
 let glassList; 
 let ingredientsList;
@@ -26,13 +25,28 @@ $(window).on("load", async () => {
   };
   document.addEventListener("scroll", onScroll);
 
-  categoriesList = (await axios.get(api + "list.php?c=list")).data.drinks;
-  glassList  = (await axios.get(api + "list.php?g=list")).data.drinks; 
-  ingredientsList= (await axios.get(api + "list.php?i=list")).data.drinks;
-  alcoholicList= (await axios.get(api + "list.php?a=list")).data.drinks;
+  //Llistes de filtres
+  // categoriesList = (await axios.get(api + "list.php?c=list")).data.drinks;
+  // glassList  = (await axios.get(api + "list.php?g=list")).data.drinks; 
+  // ingredientsList= (await axios.get(api + "list.php?i=list")).data.drinks;
+  // alcoholicList= (await axios.get(api + "list.php?a=list")).data.drinks;
+
+  // Enter també activa el botó de búsqueda 
+  $(document).keypress(function(e) {
+    if (e.which === 13) {
+        $(".search").click();
+    }
+  });
+  $('.form-control').keypress(function (e) {                                       
+       if (e.which == 13) {
+          e.preventDefault();
+          $(".search").click();
+       }
+  });
 
   //Search
   $("#search").on("click", handleSearch);
+
 });
 
 
@@ -45,24 +59,24 @@ const handleSearch = async () => {
     console.log("1 char")
   }
   else{
-    const drinks = (await axios.get(api+"search.php?s="+userInput)).data.drinks;
-    if (drinks){
-      displayCards(drinks);
-    console.log("Normal search")
-    }
-    else{
       const ingredient = ingredientsList.find(item => (item.strIngredient1).toLowerCase() === userInput);
       if (ingredient){
-        const drinks = (await axios.get(api+"filter.php?i="+userInput)).data.drinks;
-        displayCards(drinks)
-        console.log("Es una ingredient")
-      }
-      else{
+          const drinks = (await axios.get(api+"filter.php?i="+userInput)).data.drinks;
+          displayCards(drinks)
+          console.log("Es una ingredient")
+    }
+    else{
         const categoria = categoriesList.find(item => (item.strCategory).toLowerCase() === userInput);
         if (categoria){
-        const drinks = (await axios.get(api+"filter.php?c="+userInput)).data.drinks;
-        displayCards(drinks)
+          const drinks = (await axios.get(api+"filter.php?c="+userInput)).data.drinks;
+          displayCards(drinks)
           console.log("Es una categoria")
+      }
+      else{
+        const drinks = (await axios.get(api+"search.php?s="+userInput)).data.drinks;
+        if (drinks){
+          displayCards(drinks);
+          console.log("Normal search")
         }
         else{
           const alcoholica = alcoholicList.find(item => (item.strAlcoholic).toLowerCase() === userInput);

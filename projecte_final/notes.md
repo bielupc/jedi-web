@@ -36,9 +36,9 @@
 - [X] Convert to lowercase
 - [X] Filter search (get categories, ingredients and check)
 
-- [ ] Enter search
+- [X] Enter search
 - [ ] Offcanvas cards
-- [ ] Arreglar prioritat
+- [X] Arreglar prioritat
 - [ ] Random drink
 - [ ] Not found page or alert
 
