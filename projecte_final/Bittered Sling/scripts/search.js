@@ -108,30 +108,39 @@ const handleSearch = async () => {
   );
 }
 
-  // Display de les opcions 
+// Display de les opcions 
 const displayCards = (drinks) => {
   $(".cards").empty();
   let id = 0;
   drinks.forEach(async (drink) => {
 
+    // Si es busca per filtres falten dades
     if (!drink.strInstructions){
       drink = (await axios.get(api+"lookup.php?i="+drink.idDrink)).data.drinks[0];
     }
 
+    // Etiquetes
     let tags = [drink.strAlcoholic, drink.strCategory];
-
     if (drink.strIBA){
       tags.push(drink.strIBA);
     }
-
     if (drink.strTags) {
       let splitted = drink.strTags.split(",");
       splitted.map(tag => tags.push(tag))
     }
 
+    // Ingredients
+    let ingredients = [];
+    let quantity = [];
 
-    console.log(tags)
-
+    let i = 1;
+    let selector = "strIngredient1"
+    while (drink[selector] !== null){
+      ingredients.push((drink[selector]));
+      quantity.push(drink["strMeasure"+String(i)]);
+      i++
+      selector = "strIngredient"+String(i)
+    }
 
     $(".cards").append(`
       <div class="card d-flex" id="${id}">
@@ -149,7 +158,7 @@ const displayCards = (drinks) => {
               <img class="col" src="${drink.strDrinkThumb}">
               <div class="col d-flex justify-content-start align-items-center flex-column">
                 <h4 class="ingredients">Ingredients</h4>
-                <ul class="ow">
+                <ul class="ingredients-${id}">
                   <li>&#x2022;Holaasdk (1sdfj)</li>
                 </ul>
               </div>
@@ -158,7 +167,17 @@ const displayCards = (drinks) => {
         </div> 
         <h2 id="tittle-${id}" class="tittle">${drink.strDrink}</h2>
       </div>
+
+      
     `);
+
+    //Afegim els ingredients
+    for(let i = 0; i < ingredients.length; i++){
+      $(`.ingredients-${id}`).append(`
+        <li>&#x2022; ${ingredients[i]} (${!! quantity[i] ? quantity[i] : 'free choice' })</li>
+      `);
+    }
+    
     id++;
   });
 }

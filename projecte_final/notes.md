@@ -43,8 +43,7 @@
 - [X] Alcoholic request
 - [X] Ingredients i etiquetes
 - [ ] Not found page or alert
-- [ ] Clear "//"
-
 - [ ] Search preview
+
 - [ ] Adjustments
 - [ ] Responsiveness
