@@ -1,5 +1,4 @@
 /* Ajustaments generals */
-
 html, body{
   padding: 0;
   margin: 0;
@@ -202,7 +201,6 @@ section{
 }
 
 /* Secció 3 */
-
 .section-3{
   background-color: var(--dark-grey);
   position: relative;
@@ -340,9 +338,6 @@ section{
     font-size: 18px;
   }
 }
-
-
-
 
 /* Alertes */
 

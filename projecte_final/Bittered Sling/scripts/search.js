@@ -46,7 +46,8 @@ $(window).on("load", async () => {
     for (let i=0; i<4; i++){
       drinks.push((await axios.get(api + "random.php")).data.drinks[0]);
     }
-    displayCards(drinks)
+    displayCards(drinks);
+
     //Hover disappear
     $(".image").mouseenter(function(e) {
         let id = e.target.parentElement.id;
@@ -99,14 +100,14 @@ const handleSearch = async () => {
             if (alcoholica){
               const drinks = (await axios.get(api+"filter.php?a="+userInput)).data.drinks;
               displayCards(drinks)
-              console.log("Es una cat. alcoholica")
+              console.log("Es una cat. alcohol")
             }
             else{
               const glass = glassList.find(item => (item.strGlass).toLowerCase() === userInput);
               if (glass) {
                 const drinks = (await axios.get(api+"filter.php?g="+userInput)).data.drinks;
                 displayCards(drinks)
-                console.log("Es busca un got")
+                console.log("Es un got")
               }
               else{
                 $(".cards").replaceWith(`
@@ -202,7 +203,6 @@ const displayCards = (drinks) => {
         <li>&#x2022; ${ingredients[i]} (${!! quantity[i] ? quantity[i]: 'free choice'})</li>
       `);
     }
-    
     id++;
   });
 }

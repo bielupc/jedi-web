@@ -48,5 +48,5 @@
 - [X] Glass type
 - [X] Glass colors
 
-- [ ] Adjustments
+- [X] Adjustments
 - [X] Responsiveness

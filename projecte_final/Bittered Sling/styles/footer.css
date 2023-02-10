@@ -5,9 +5,7 @@ ul{
 .footer{
   padding: 70px 0;
   height: 260px;
-
 }
-
 
 h4{
   color: var(--violet-5) ;
@@ -15,7 +13,6 @@ h4{
   padding-left: 30px;
   font-weight: bolder;
 }
-
 
 .footer h4::after{
   content: '';
@@ -59,14 +56,12 @@ h4{
 
 .col .social-links a:hover{
   background-color: var(--orange-5)
-
 }
 
 @media (max-width: 550px){
   .footer-wrapper{
     flex-direction: column;
     justify-content: center;
-
   }
 }
 
