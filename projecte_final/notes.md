@@ -37,10 +37,11 @@
 - [X] Filter search (get categories, ingredients and check)
 
 - [X] Enter search
-- [ ] Offcanvas cards
+- [X] Offcanvas cards
 - [X] Arreglar prioritat
 - [ ] Random drink
 - [ ] Not found page or alert
+- [ ] Clear "//"
 
 - [ ] Search preview
 - [ ] Adjustments

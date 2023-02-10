@@ -25,7 +25,7 @@ $(window).on("load", async () => {
   };
   document.addEventListener("scroll", onScroll);
 
-  //Llistes de filtres
+  // Llistes de filtres
   // categoriesList = (await axios.get(api + "list.php?c=list")).data.drinks;
   // glassList  = (await axios.get(api + "list.php?g=list")).data.drinks; 
   // ingredientsList= (await axios.get(api + "list.php?i=list")).data.drinks;
@@ -46,6 +46,9 @@ $(window).on("load", async () => {
 
   //Search
   $("#search").on("click", handleSearch);
+
+  //Expand cocktail card
+  $("#select").on("click", handleSelect);
 
 });
 
@@ -92,10 +95,17 @@ const handleSearch = async () => {
               displayCards(drinks)
               console.log("Es busca un got")
             }
+            else{
+              console.log("Not found!")
+            }
           }
         }
       }
   }
+ }
+
+ const handleSelect = () => {
+  console.log("cards expand")
  }
 
 
