@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Secular+One&display=swap');
+
+:root{
+  --orange-1: #ff6d00ff;
+  --orange-2: #ff7900ff;
+  --orange-3: #ff8500ff;
+  --orange-4: #ff9100ff;
+  --orange-5: #ff9e00ff;
+
+  --violet-1: #240046;
+  --violet-2: #3c096cff;
+  --violet-3: #5a189aff;
+  --violet-4: #7b2cbfff;
+  --violet-5: #9d4eddff;
+
+  --dark-grey: #212529;
+  --less-dark-grey: #343A40;
+}
+
+*{
+  font-family: 'Poppins', sans-serif;
+}
+
+body{
+  overflow-anchor: none;
+}
+
+::-moz-selection { 
+  color: rgb(255, 255, 255);
+  background: var(--orange-4);
+}
+
+::selection {
+  color: white;
+  background: var(--orange-4);
+}
+
+.navbar .active{
+  color: var(--violet-5) !important;
+}
